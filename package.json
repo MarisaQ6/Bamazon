@@ -1,0 +1,19 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "hw",
+  "main": "bamazonCust.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarisaQ6/Bamazon.git"
+  },
+  "author": "Marisa Quijano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarisaQ6/Bamazon/issues"
+  },
+  "homepage": "https://github.com/MarisaQ6/Bamazon#readme"
+}
