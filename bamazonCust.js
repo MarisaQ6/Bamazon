@@ -12,7 +12,7 @@ require("console.table");
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port:
+    port: 8889
     user: "root",
     database: "bamazon"
 })
