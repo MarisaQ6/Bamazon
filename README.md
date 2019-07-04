@@ -19,6 +19,8 @@ A mock website inpired by something I use almost monthly, ~~Amazon~~ **BAMAZON**
 
 _(photos here)_
 
+![alt text][logo]
+
 
 #### Authors & Special Thanks:
 
