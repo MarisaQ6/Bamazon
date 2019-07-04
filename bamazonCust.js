@@ -48,19 +48,23 @@ prompt.get(["id", "inStock"], function (err, result) {
 
 	function selectID(){
 		connection.query('SELECT * FROM Products WHERE ItemID =' + CustomerPickID, function(err, res) { 
-			if (err) throw err;
+            
+            if (err) throw err;
 			console.log(res);
-			var want = CustomerQuantity;
+            
+            var want = CustomerQuantity;
    			var have = res[0].StockQuantity;
    			var individPrice = res[0].Price;
    			newQuantity = have - want;
-   			if (newQuantity >= 0){
+               
+               if (newQuantity >= 0){
           		console.log('we have stock '+res[0].ProductName+' in stock.');
           		var totalCost= individPrice * CustomerQuantity;
           		console.log("The total is " +totalCost);
           		connection.query('UPDATE Products SET StockQuantity = '+newQuantity+' WHERE ItemID ='+CustomerPickID, function(err, res){
-        		if (err) throw err;
-        			connection.query('SELECT ItemID, ProductName, DepartmentName, Price, StockQuantity FROM products WHERE ItemID ='+CustomerPickID, function(err, res){
+                
+                    if (err) throw err;
+        			connection.query('SELECT item_id, product_name, department_name, price, stock_quantity FROM products WHERE ItemID ='+CustomerPickID, function(err, res){
           				console.log(res);
           			});	
         		});
